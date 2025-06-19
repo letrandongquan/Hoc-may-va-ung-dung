@@ -3,7 +3,7 @@
 
 ## Viết chương trình biến đổi ảnh
 ## 1.1 chọn đối tượng trong ảnh
-phép trích ảnh nhỏ trong một ảnh lớn ban đầu. chương trình yêu cầu chọn một vật thể trong ảnh gốc ra.
+phép trích ảnh nhỏ trong một ảnh lớn ban đầu. ví dụ yêu cầu chọn một vật thể trong ảnh gốc rồi cắt nó ra.
 ## Công Nghệ sử dụng
 output = input_array[start_dim1:end_dim1, start_dim2:end_dim2]
 đây là câu lệnh dùng để cắt một phần của mảng dữa liệu với
