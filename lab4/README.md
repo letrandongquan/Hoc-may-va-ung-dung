@@ -364,3 +364,7 @@ if seg_choice in seg_map:
     result = seg_map[seg_choice](image)
     image = (result * 255).astype(np.uint8)
 ```
+# Tài liệu tham khảo 
+Digital Image Processing - Rafael C. Gonzalez
+https://thigiacmaytinh.com/ly-thuyet-ve-phan-nguong-anh-threshold/
+Slide bài giảng Nhập môn Xử lý ảnh số - Văn Lang University
