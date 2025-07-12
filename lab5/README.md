@@ -31,11 +31,11 @@ pip install opencv-python
 - Xác định và gán nhãn cho các vùng liên thông, mỗi vùng đối tượng riêng biệt sẽ được gán một giá trị nhãn khác nhau. giúp đếm số lượng đối tượng trong ảnh, trích xuất đặc trưng hình học
 # Công thức toán học
 1. phương pháp otsu
-b(x, y) = {
+- b(x, y) = {
     1, nếu a(x, y) > T
     0, nếu a(x, y) ≤ T
 }
-a(x,y): giá trị pixel ảnh xám.
+- a(x,y): giá trị pixel ảnh xám.
 T
 T: ngưỡng Otsu tự động tính toán.
 2. gán nhãn vùng liên thông
@@ -44,8 +44,8 @@ N: tổng số vùng liên thông.
 c(x,y): ảnh gán nhãn.
 3. trích xuất thuộc tính
 Centroid: trọng tâm
-centroid_x = (1 / A) * ∑_{(x, y) ∈ R} x  
-centroid_y = (1 / A) * ∑_{(x, y) ∈ R} y
+- centroid_x = (1 / A) * ∑_{(x, y) ∈ R} x  
+- centroid_y = (1 / A) * ∑_{(x, y) ∈ R} y
 Area: diện tích: số pixel thuộc vùng.
 Bouding box: khung chữ nhật nhỏ nhất chứa toàn bộ vùng.
 # ví dụ:
@@ -121,12 +121,12 @@ Phát hiện các cạnh biên trong ảnh theo cả chiều dọc và ngang. X�
 toán tử sobel, là các kernel tích chập (convolution) để tính xấp xỉ đạo hàm nhật nhất. theo từng chiều
 -chiều ngang (Gx):
 -chiều dọc (Gy):
-Gx = [ [-1,  0, +1],
+- Gx = [ [-1,  0, +1],
        [-2,  0, +2],
        [-1,  0, +1] ]
 
--sobel theo chiều dọc (Gy):
-Gy = [ [-1, -2, -1],
+- sobel theo chiều dọc (Gy):
+- Gy = [ [-1, -2, -1],
        [  0,  0,  0],
        [+1, +2, +1] ]
 
@@ -152,12 +152,12 @@ bmg = np.abs(gx) + np.abs(gy)
 giúp nhận diện vật thể, theo dõi chuyển động,...
 # Công thức toán học
 đạo hàm bật nhất theo chiều x và y:
-Ix = ∂I/∂x  ≈ sobel_x(I)
-Iy = ∂I/∂y  ≈ sobel_y(I)
+- Ix = ∂I/∂x  ≈ sobel_x(I)
+- Iy = ∂I/∂y  ≈ sobel_y(I)
 
 ma trận cấu trúc harris (structure matrix C)
 
-C = [ Ix2   Ixy
+- C = [ Ix2   Ixy
       Ixy   Iy2 ]
 Ix2 = gaussian_blur(Ix2)
 Iy2 = gaussian_blur(Iy2)
@@ -286,8 +286,8 @@ desc=(x−μ)/ σ+ϵ
  best/second < ratio
  nếu điều kiện đúng ratio = 0.75, ta coi như matching hợp lệ
 # ví dụ:
--ảnh 1 và ảnh 2 có vật thể đối tượng giống nhau nhưng góc chụp khác nhau, thì cac 1diem639 giống nhau như, mái nhà, cửa, cây,... sẽ được nối giữa hai ảnh
--vòng tròn xanh lá là điểm đặc trưng ảnh 1, màu xanh dương là điểm đặc trưng ảnh 2
+- ảnh 1 và ảnh 2 có vật thể đối tượng giống nhau nhưng góc chụp khác nhau, thì cac 1diem639 giống nhau như, mái nhà, cửa, cây,... sẽ được nối giữa hai ảnh
+- vòng tròn xanh lá là điểm đặc trưng ảnh 1, màu xanh dương là điểm đặc trưng ảnh 2
 # Code chính: 
 ```python
 def harris_corners(img_gray, threshold=0.01):
