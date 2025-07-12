@@ -1,8 +1,8 @@
 ### Nhập Môn Xử Lý Ảnh Số - Lab 5
 ### xác định đối tượng trong ảnh
-Sinh viên thực hiện: Lê Trần Đông Quân MSSV: 2374802010414
-Môn học: Nhập môn xử lý ảnh số
-Giảng viên: Đỗ Hữu Quân
+- Sinh viên thực hiện: Lê Trần Đông Quân MSSV: 2374802010414
+- Môn học: Nhập môn xử lý ảnh số
+- Giảng viên: Đỗ Hữu Quân
 ## Giới thiệu
 Xác định đối tượng trong ảnh là gán nhãn để phân biệt các đối tượng khác nhau trong ảnh . Trong 1 ảnh đã được gán nhãn, tất cả các pixel của một đối tượng có giá trị như nhau.các chương trình sẽ học bao gồm:
 - chương trình gán nhãn cho phân vùng ảnh
@@ -50,17 +50,21 @@ Area: diện tích: số pixel thuộc vùng.
 Bouding box: khung chữ nhật nhỏ nhất chứa toàn bộ vùng.
 # ví dụ:
 giả sử có một ảnh nhị phân, có 2 vùng liên thông được xác định , vùng 1 ( ở trên) gán nhãn là 1 và vùng 2(ở dưới): gán nhãn là 2
+```python
 0 0 1 1 0
 0 0 1 1 0
 0 0 0 0 0
 0 1 1 0 0
 0 1 1 0 0
+```
 sau khi đã gán nhãn:
+```python
 0 0 1 1 0
 0 0 1 1 0
 0 0 0 0 0
 0 2 2 0 0
 0 2 2 0 0
+```
 area vùng 1 bằng 4 pixel, Bounding box của vùng 2 từ (3, 1) đến (5, 3), centroid được tính theo toạ độ trung bình của các điểm trong vùng.
 
 # Code chính: 
